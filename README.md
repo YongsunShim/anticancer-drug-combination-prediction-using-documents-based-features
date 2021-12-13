@@ -32,7 +32,7 @@ java /src/main/java/bike/snu/ac/kr/anticancer_drug_combination_prediction_using_
 
 **Step 3: revise biomedical documents**
 ```c
-python revise_documents.py
+python document_preprocessing.py
 ```
 
 **Step 4: extract document-based features**

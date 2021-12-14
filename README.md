@@ -27,7 +27,7 @@ You should download it [here](https://drive.google.com/file/d/1hBGQCiRV6eqENgYHG
 
 **Step 2: collect biomedical documents**
 ```c
-java /src/main/java/bike/snu/ac/kr/anticancer_drug_combination_prediction_using_documents_based_features/Main
+sh collect_documents.sh
 ```
 
 **Step 3: revise biomedical documents**

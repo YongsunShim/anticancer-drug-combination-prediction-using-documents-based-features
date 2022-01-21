@@ -30,10 +30,10 @@ def get_token(text):
 def main():
     documents_path = './data/documents.txt'
     revised_documents_path = './data/revised_documents.txt'
-    
-    revised_documents_f = open(revised_documents_path, 'w')
 
     documents_f = open(documents_path, 'r')
+    revised_documents_f = open(revised_documents_path, 'w')
+
     documents_lines = documents_f.readlines()
 
     for i in range(0, len(documents_lines)):
@@ -42,10 +42,10 @@ def main():
             revised_text = ''
             for j in range(0, len(get_token(split[2]))):
                 revised_text = revised_text + ' ' + get_token(split[2])[j]
-            revised_article_f.write(revised_text + '\n')
+            revised_documents_f.write(revised_text + '\n')
         i=i+1
-    article_f.close()
-    revised_article_f.close()
+    documents_f.close()
+    revised_documents_f.close()
     
 if __name__ == "__main__":
     main()

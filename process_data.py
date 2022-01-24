@@ -18,8 +18,7 @@ def input_synergy_data(dataset):
     def process_almanac():
         data = pd.read_csv("./data/synergy_data/NCI_ALMANAC/ComboDrugGrowth_Nov2017.csv")
         # summarize 3*3 or 5*3 data into one by calculating the mean score
-        summary_data = data.groupby(['SCREENER','NSC1','NSC2','CELLNAME']).agg({"SCORE":'mean',"STUDY":'count'}).reset_index().rename(columns={'SCORE':'MEAN_SCORE',
-                                                                                                                                 'STUDY':'count'}).astype({'NSC1':'int32','NSC2':'int32'})
+        summary_data = data.groupby(['SCREENER','NSC1','NSC2','CELLNAME']).agg({"SCORE":'mean',"STUDY":'count'}).reset_index().rename(columns={'SCORE':'MEAN_SCORE','STUDY':'count'}).astype({'NSC1':'int32','NSC2':'int32'})
         # some experiments may fail and get NA values, drop these experiments
         summary_data = summary_data.dropna()
 
